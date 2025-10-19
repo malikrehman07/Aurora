@@ -131,11 +131,11 @@ const Home = () => {
             {/* Text Section */}
             <div className="flex-1 text-left lg:text-left">
               <h1 className="text-5xl font-extrabold leading-tight mb-4" style={{ lineHeight: "1.2" }}>
-                "Aurora Home Interiors
+                &quot;Aurora Home Interiors
                 <br />
                 Transformed Our House
                 <br />
-                Into A Dream Home."
+                Into A Dream Home.&quot;
               </h1>
               <h2 className="text-md font-semibold text-white">Verified Customer: Jake Milson</h2>
             </div>

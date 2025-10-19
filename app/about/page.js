@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import ConsultationModal from "../ConsultationModal/page";
 
-const about = () => {
+const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // function to open modal
@@ -50,4 +50,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
