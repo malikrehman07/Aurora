@@ -22,8 +22,8 @@ const Home = () => {
             <h1 className="text-5xl font-bold mb-4 max-w-2xl">Designing spaces that tell your story</h1>
             <h1 className="text-xl" >Elegant interiors for modern living</h1>
             <div className='my-4 space-x-2' >
-              <button className='bg-[#C8A165] hover:bg-[#b58b52] text-white font-small py-3 px-5 rounded-4xl transition-all duration-300 shadow-md hover:shadow-lg' >View Portfolio</button>
-              <button onClick={() => setIsModalOpen(true)} className='bg-[#C8A165] hover:bg-[#b58b52] text-white font-small py-3 px-3 rounded-4xl transition-all duration-300 shadow-md hover:shadow-lg' >Book Consultation</button>
+              <button className='bg-[#C8A165] hover:bg-[#C5A572] text-white font-small py-3 px-5 rounded-4xl transition-all duration-300 shadow-md hover:shadow-lg' >View Portfolio</button>
+              <button onClick={() => setIsModalOpen(true)} className='bg-[#C8A165] hover:bg-[#C5A572] text-white font-small py-3 px-3 rounded-4xl transition-all duration-300 shadow-md hover:shadow-lg' >Book Consultation</button>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@ const Home = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
-      <div style={{ backgroundColor: '#b58b52' }} >
+      <div style={{ backgroundColor: '#C5A572' }} >
         <div className='container py-12 mx-auto' >
           <div className='mb-5' >
             <h1 className='text-center text-4xl font-bold' >Our Services</h1>
@@ -118,7 +118,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: "#b58b52" }}>
+      <div style={{ backgroundColor: "#C5A572" }}>
         <div className="container py-12 mx-auto px-5">
           <div className="mb-10">
             <h1 className="text-center text-4xl font-bold">
@@ -172,25 +172,25 @@ const Home = () => {
           <form className="space-y-5">
             <div>
               <label className="block text-gray-700 mb-1">Full Name</label>
-              <input type="text" placeholder="Your name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none" />
+              <input type="text" placeholder="Your name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" />
             </div>
 
             <div>
               <label className="block text-gray-700 mb-1">Email Address</label>
-              <input type="email" placeholder="you@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none" />
+              <input type="email" placeholder="you@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" />
             </div>
 
             <div>
               <label className="block text-gray-700 mb-1">Phone Number</label>
-              <input type="tel" placeholder="+92 300 1234567" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none" />
+              <input type="tel" placeholder="+92 300 1234567" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" />
             </div>
 
             <div>
               <label className="block text-gray-700 mb-1">Message</label>
-              <textarea rows="4" placeholder="Tell us about your project..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none"></textarea>
+              <textarea rows="4" placeholder="Tell us about your project..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none"></textarea>
             </div>
 
-            <button type="submit" className="w-full bg-[#b58b52] text-white py-3 rounded-lg font-semibold hover:bg-[#a47c44] transition-all duration-300">
+            <button type="submit" className="w-full bg-[#C5A572] text-white py-3 rounded-lg font-semibold hover:bg-[#a47c44] transition-all duration-300">
               Submit Quote Request
             </button>
           </form>

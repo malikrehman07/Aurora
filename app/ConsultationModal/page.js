@@ -45,7 +45,7 @@ const ConsultationModal = ({ isOpen = false, onClose = () => {} }) => {
           ×
         </button>
 
-        <h2 className="text-2xl font-bold text-[#b58b52] mb-4 text-center">
+        <h2 className="text-2xl font-bold text-[#C5A572] mb-4 text-center">
           Book a Consultation
         </h2>
 
@@ -57,21 +57,21 @@ const ConsultationModal = ({ isOpen = false, onClose = () => {} }) => {
           <input
             type="text"
             placeholder="Your Name"
-            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#b58b52]"
+            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#C5A572]"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#b58b52]"
+            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#C5A572]"
           />
           <textarea
             rows="4"
             placeholder="Your Message"
-            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#b58b52]"
+            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-[#C5A572]"
           ></textarea>
           <button
             type="submit"
-            className="bg-[#b58b52] text-white py-2 rounded-md hover:bg-[#9d7846] transition-all"
+            className="bg-[#C5A572] text-white py-2 rounded-md hover:bg-[#9d7846] transition-all"
           >
             Send Request
           </button>

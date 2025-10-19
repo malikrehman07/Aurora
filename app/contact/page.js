@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Info */}
         <div>
-          <h1 className="text-4xl font-bold mb-4 text-[#b58b52]">
+          <h1 className="text-4xl font-bold mb-4 text-[#C5A572]">
             Get in Touch
           </h1>
           <p className="text-gray-700 mb-6">
@@ -26,21 +26,21 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Full Name"
-            className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#b58b52]"
+            className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#C5A572]"
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#b58b52]"
+            className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#C5A572]"
           />
           <textarea
             placeholder="Your Message"
             rows={4}
-            className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#b58b52]"
+            className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:border-[#C5A572]"
           ></textarea>
           <button
             type="submit"
-            className="w-full py-3 bg-[#b58b52] text-white font-semibold rounded-lg hover:bg-[#a1783d] transition"
+            className="w-full py-3 bg-[#C5A572] text-white font-semibold rounded-lg hover:bg-[#a1783d] transition"
           >
             Send Message
           </button>
