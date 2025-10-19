@@ -1,103 +1,203 @@
-import Image from "next/image";
+'use client';
+import React, { useState } from 'react'
+import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
+import ConsultationModal from './ConsultationModal/page';
 
-export default function Home() {
+const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <>
+      <div className="relative w-full h-[700px]" >
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="https://res.cloudinary.com/djpvxvokp/image/upload/v1760260260/Aurora-Hero_baqmdj.webp"
+          alt="charity"
+          fill
+          className="object-cover"
+          quality={85}
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className=" text-white p-6 rounded-lg max-w-1xl text-center">
+            <h1 className="text-5xl font-bold mb-4 max-w-2xl">Designing spaces that tell your story</h1>
+            <h1 className="text-xl" >Elegant interiors for modern living</h1>
+            <div className='my-4 space-x-2' >
+              <button className='bg-[#C8A165] hover:bg-[#b58b52] text-white font-small py-3 px-5 rounded-4xl transition-all duration-300 shadow-md hover:shadow-lg' >View Portfolio</button>
+              <button onClick={() => setIsModalOpen(true)} className='bg-[#C8A165] hover:bg-[#b58b52] text-white font-small py-3 px-3 rounded-4xl transition-all duration-300 shadow-md hover:shadow-lg' >Book Consultation</button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </div>
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+      <div style={{ backgroundColor: '#b58b52' }} >
+        <div className='container py-12 mx-auto' >
+          <div className='mb-5' >
+            <h1 className='text-center text-4xl font-bold' >Our Services</h1>
+          </div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-5'>
+            <div className='shadow-md rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center bg-white' >
+              <img src="https://img.icons8.com/?size=60&id=2797&format=png&color=000000" alt='home' className='my-2' />
+              <h1 className='text-center text-xl font-semibold mb-2' >Residential Design</h1>
+              <p className='text-center' >Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div className='shadow-md rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center bg-white' >
+              <img src="https://img.icons8.com/?size=60&id=10516&format=png&color=000000" alt='home' className='my-2' />
+              <h1 className='text-center text-xl font-semibold mb-2' >Office Interior</h1>
+              <p className='text-center' >Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div className='shadow-md rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center bg-white' >
+              <img src="https://img.icons8.com/?size=60&id=PjY5a4n6CoxP&format=png&color=000000" alt='home' className='my-2' />
+              <h1 className='text-center text-xl font-semibold mb-2' >Renovation & Styling</h1>
+              <p className='text-center' >Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div className='shadow-md rounded-2xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center bg-white' >
+              <img src="https://img.icons8.com/?size=60&id=2797&format=png&color=000000" alt='home' className='my-2' />
+              <h1 className='text-center text-xl font-semibold mb-2' >Modular Interior</h1>
+              <p className='text-center' >Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ backgroundColor: '#ededed' }} >
+        <div className='container py-12 mx-auto'>
+          <div className='mb-5' >
+            <h1 className='text-center text-4xl font-bold' >Featured Products</h1>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-5">
+            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image src="https://www.marthastewart.com/thmb/lxfu2-95SWCS0jwciHs1mkbsGUM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/modern-living-rooms-wb-1-bc45b0dc70e541f0ba40364ae6bd8421.jpg" alt='Living Room' fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" priority />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="text-lg font-bold mb-2">LIVING ROOM</h3>
+                <p className="text-gray-600 mb-3">Lorem ipsum dolor sit amet.</p>
+                <div className="flex justify-center">
+                  <ArrowRight className="w-5 h-5 text-black hover:text-gray-700" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZm_hFXOus0Jh8xt1eaAaMUo54FLuooVa_nA&s" alt='Living Room' fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" priority />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="text-lg font-bold mb-2">HOME OFFICE</h3>
+                <p className="text-gray-600 mb-3">Lorem ipsum dolor sit amet.</p>
+                <div className="flex justify-center">
+                  <ArrowRight className="w-5 h-5 text-black hover:text-gray-700" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image src="https://marbella1.es/cdn/shop/articles/what-luxury-villas-will-be-ready-in-2025.png?v=1734251278&width=1600" alt='Living Room' fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" priority />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="text-lg font-bold mb-2">LUXURY VILLAS</h3>
+                <p className="text-gray-600 mb-3">Lorem ipsum dolor sit amet.</p>
+                <div className="flex justify-center">
+                  <ArrowRight className="w-5 h-5 text-black hover:text-gray-700" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image src="https://media.designcafe.com/wp-content/uploads/2021/12/27144355/design-cafe-modular-furniture-benefits.jpg" alt='Living Room' fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" priority />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="text-lg font-bold mb-2">MODULAR INTERIORS</h3>
+                <p className="text-gray-600 mb-3">Lorem ipsum dolor sit amet.</p>
+                <div className="flex justify-center">
+                  <ArrowRight className="w-5 h-5 text-black hover:text-gray-700" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ backgroundColor: "#b58b52" }}>
+        <div className="container py-12 mx-auto px-5">
+          <div className="mb-10">
+            <h1 className="text-center text-4xl font-bold">
+              Testimonials
+            </h1>
+          </div>
+
+          {/* ✅ Responsive layout: Image first on small, side-by-side on large */}
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+            {/* Text Section */}
+            <div className="flex-1 text-left lg:text-left">
+              <h1 className="text-5xl font-extrabold leading-tight mb-4" style={{ lineHeight: "1.2" }}>
+                "Aurora Home Interiors
+                <br />
+                Transformed Our House
+                <br />
+                Into A Dream Home."
+              </h1>
+              <h2 className="text-md font-semibold text-white">Verified Customer: Jake Milson</h2>
+            </div>
+
+            {/* Image Section */}
+            <div className="flex-1 flex justify-center py-10 ">
+              <div className="group relative w-80 h-80 rounded-full overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white">
+                <Image src="https://img.freepik.com/free-photo/portrait-confident-young-businessman-with-his-arms-crossed_23-2148176206.jpg?semt=ais_hybrid&w=740&q=80" alt="Customer" fill className="object-cover group-hover:scale-110 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 25vw" priority />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2" >
+        {/* Left Image Section */}
+        <div className="relative w-full h-[300px] md:h-auto">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="https://www.satinandslateinteriors.com/wp-content/uploads/2023/05/Minimalist-Interior-Design.jpg"
+            alt="Interior Design"
+            fill
+            className="object-cover"
+
+            priority
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        </div>
+
+        {/* Right Form Section */}
+        <div className="flex flex-col justify-center px-6 py-10 bg-white">
+          <h1 className="text-4xl font-bold mb-6 text-gray-800">Get a Quote</h1>
+          <p className="text-gray-600 mb-8">
+            Fill out the form below and our team will get back to you as soon as possible.
+          </p>
+
+          <form className="space-y-5">
+            <div>
+              <label className="block text-gray-700 mb-1">Full Name</label>
+              <input type="text" placeholder="Your name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none" />
+            </div>
+
+            <div>
+              <label className="block text-gray-700 mb-1">Email Address</label>
+              <input type="email" placeholder="you@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none" />
+            </div>
+
+            <div>
+              <label className="block text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" placeholder="+92 300 1234567" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none" />
+            </div>
+
+            <div>
+              <label className="block text-gray-700 mb-1">Message</label>
+              <textarea rows="4" placeholder="Tell us about your project..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b58b52] outline-none"></textarea>
+            </div>
+
+            <button type="submit" className="w-full bg-[#b58b52] text-white py-3 rounded-lg font-semibold hover:bg-[#a47c44] transition-all duration-300">
+              Submit Quote Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
+  )
 }
+
+export default Home
