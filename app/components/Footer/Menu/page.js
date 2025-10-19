@@ -21,7 +21,7 @@ const Menu = () => {
           <h2 className="text-xl font-semibold mb-4">Useful Links</h2>
           <ul className="space-y-2">
             <li>
-              <Link href="#about" className="hover:text-[#b58b52] transition">About Us</Link>
+              <Link href="/about" className="hover:text-[#b58b52] transition">About Us</Link>
             </li>
             <li>
               <Link href="/" className="hover:text-[#b58b52] transition">Blog</Link>
