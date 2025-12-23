@@ -24,7 +24,7 @@ const Menu = () => {
               <Link href="/about" className="hover:text-[#C5A572] transition">About Us</Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-[#C5A572] transition">Blog</Link>
+              <Link href="/blogs" className="hover:text-[#C5A572] transition">Blog</Link>
             </li>
             <li>
               <Link href="/" className="hover:text-[#C5A572] transition">FAQ</Link>
