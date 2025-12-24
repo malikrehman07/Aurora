@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+const slugify = (text) =>
+  text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
+
+export const metadata = {
+  title: "Blogs",
+  description: "Read the latest articles and updates from our blog.",
+};
+
 export default async function Blogs() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",
@@ -8,11 +20,11 @@ export default async function Blogs() {
   const blogs = await res.json();
 
   return (
-    <div style={{ maxWidth: "900px", margin: "0 auto", padding: "40px 20px" }}>
+    <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
       <h1 style={{ marginBottom: "30px" }}>All Blogs</h1>
 
       {blogs.map((blog) => {
-        const slug = blog.title.toLowerCase().replace(/\s+/g, "-"); // simple slug
+        const slug = slugify(blog.title);
 
         return (
           <Link

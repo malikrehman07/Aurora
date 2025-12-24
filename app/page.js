@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import ConsultationModal from './ConsultationModal/page';
 
+
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -153,7 +154,7 @@ const Home = () => {
         {/* Left Image Section */}
         <div className="relative w-full h-[300px] md:h-auto">
           <Image
-            src="https://www.satinandslateinteriors.com/wp-content/uploads/2023/05/Minimalist-Interior-Design.jpg"
+            src="https://decormatters-blog-uploads.s3.amazonaws.com/studiomkn_5ea0ab73a3.jpg"
             alt="Interior Design"
             fill
             className="object-cover"

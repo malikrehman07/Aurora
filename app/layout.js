@@ -6,7 +6,10 @@ import Footer from "./components/Footer/page";
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata = {
-  title: "Aurora Home Interiors",
+  title: {
+    template: "%s | Aurora Home Interiors",
+    default: "Aurora Home Interiors",
+  },
   description: "Aurora Home Interiors is a boutique interior design studio specializing in modern, minimalistic, and luxury home transformations.",
 };
 

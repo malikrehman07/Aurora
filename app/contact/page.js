@@ -1,5 +1,9 @@
-"use client";
 import React from "react";
+
+export const metadata = {
+  title: "Contact",
+  description: "Aurora Home Interiors is a boutique interior design studio specializing in modern, minimalistic, and luxury home transformations.",
+};
 
 const Contact = () => {
   return (
