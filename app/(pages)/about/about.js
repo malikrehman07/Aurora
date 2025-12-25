@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import ConsultationModal from "../ConsultationModal/page";
+import ConsultationModal from "@/app/ConsultationModal/page";
 
 const AboutPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
