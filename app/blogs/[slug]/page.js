@@ -7,7 +7,7 @@ const slugify = (text) =>
 
 // Metadata for SEO
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Blog({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",
