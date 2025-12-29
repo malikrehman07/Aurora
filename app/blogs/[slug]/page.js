@@ -26,6 +26,23 @@ export async function generateMetadata({ params }) {
   };
 }
 
+
+// Disable revalidation to always fetch fresh data
+export const revalidate = false;
+
+
+// Disable dynamic params to ensure all paths are pre-rendered
+export const dynamicParams = false;
+
+// Generate static paths for all blog posts
+export async function generateStaticParams() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "no-store",
+  });
+  const posts = await res.json();
+  return posts.map((post) => ({ slug: slugify(post.title) }));
+}
+// Blog post page component
 export default async function Blog({ params }) {
   const { slug } = await params;
 
