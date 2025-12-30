@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
 
 
 // Disable revalidation to always fetch fresh data
-export const revalidate = false;
+// export const revalidate = false;
 
 
 // Disable dynamic params to ensure all paths are pre-rendered
