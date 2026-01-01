@@ -5,7 +5,18 @@ export const metadata = {
   description: "Aurora Home Interiors is a boutique interior design studio specializing in modern, minimalistic, and luxury home transformations.",
 };
 
-const Contact = () => {
+// Dynamic rendering strategy
+// export const dynamic = "auto";
+// export const dynamic = "force-dynamic";
+// export const dynamic = "error";
+// export const dynamic = "force-static";
+
+
+
+const Contact = async ({searchParams}) => {
+  // const SearchParams = await searchParams;
+  // console.log('searchParams', SearchParams)
+
   return (
     <div className="bg-white py-16 px-6 md:px-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
