@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 const slugify = (text) =>
   text
     .toLowerCase()
@@ -56,9 +58,12 @@ export default async function Blog({ params }) {
   if (!post) return <div style={{ padding: 40 }}>Blog not found</div>;
 
   return (
-    <div style={{ maxWidth: 800, margin: "40px auto", padding: "0 20px" }}>
-      <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
-      <p style={{ lineHeight: "1.7", color: "#444" }}>{post.body}</p>
-    </div>
+    // Suspense for loading state But we are not using any async component here and promise must be used
+    <Suspense fallback={<div style={{ padding: 40 }}>Loading...</div>} >
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
+        <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
+        <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
+      </div>
+    </Suspense>
   );
 }
