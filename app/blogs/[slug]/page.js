@@ -59,11 +59,15 @@ export default async function Blog({ params }) {
 
   return (
     // Suspense for loading state But we are not using any async component here and promise must be used
-    <Suspense fallback={<div style={{ padding: 40 }}>Loading...</div>} >
-      <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
-        <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
-        <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
-      </div>
-    </Suspense>
+    // <Suspense fallback={<div style={{ padding: 40 }}>Loading...</div>} >
+    //   <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
+    //     <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
+    //     <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
+    //   </div>
+    // </Suspense>
+    <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
+      <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
+      <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
+    </div>
   );
 }
