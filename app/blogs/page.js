@@ -13,9 +13,7 @@ export const metadata = {
 };
 
 export default async function Blogs() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 
   const blogs = await res.json();
 

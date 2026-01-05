@@ -11,9 +11,7 @@ const slugify = (text) =>
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await res.json();
 
   const post = posts.find((p) => slugify(p.title) === slug);
@@ -48,9 +46,7 @@ export async function generateMetadata({ params }) {
 export default async function Blog({ params }) {
   const { slug } = await params;
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await res.json();
 
   const post = posts.find((p) => slugify(p.title) === slug);
