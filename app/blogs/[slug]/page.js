@@ -61,6 +61,7 @@ export default async function Blog({ params }) {
     //     <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
     //   </div>
     // </Suspense>
+    // Blog post content
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
       <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
       <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
