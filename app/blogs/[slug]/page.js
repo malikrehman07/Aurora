@@ -11,7 +11,7 @@ const slugify = (text) =>
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.org/posts");
   const posts = await res.json();
 
   const post = posts.find((p) => slugify(p.title) === slug);
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: post.title,
-    description: post.body.slice(0, 150),
+    description: post.content.slice(0, 150),
   };
 }
 
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
 
 // Generate static paths for all blog posts
 // export async function generateStaticParams() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+//   const res = await fetch("https://jsonplaceholder.org/posts", {
 //     cache: "no-store",
 //   });
 //   const posts = await res.json();
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
 export default async function Blog({ params }) {
   const { slug } = await params;
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.org/posts");
   const posts = await res.json();
 
   const post = posts.find((p) => slugify(p.title) === slug);
@@ -65,7 +65,7 @@ export default async function Blog({ params }) {
     
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "40px 20px" }}>
       <h1 style={{ marginBottom: "20px" }}>{post.title}</h1>
-      <p style={{ color: "#555", lineHeight: "1.6" }}>{post.body}</p>
+      <p style={{ color: "#555", lineHeight: "1.6" }}>{post.content}</p>
     </div>
   );
 }

@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default async function Blogs() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.org/posts");
 
   const blogs = await res.json();
 
@@ -42,7 +42,7 @@ export default async function Blogs() {
             >
               <h3 style={{ marginBottom: "10px" }}>{blog.title}</h3>
               <p style={{ color: "#555", lineHeight: "1.6" }}>
-                {blog.body.slice(0, 120)}...
+                {blog.content.slice(0, 120)}...
               </p>
             </div>
           </Link>
