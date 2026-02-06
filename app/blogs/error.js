@@ -11,7 +11,7 @@ export default function Error({ reset }) {
                 <h1>Something went wrong!</h1>
                 <p>Please try again later.</p>
 
-                {/* //  This button will retry the rendering of the component */}
+                {/*  This button will retry the rendering of the component */}
                 {/* <button onClick={() => window.location.reload()}>Retry</button> */}
 
                 {/* // This button will use next.js router to refresh the page and reset the error boundary */}
