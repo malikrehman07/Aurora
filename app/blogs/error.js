@@ -14,6 +14,8 @@ export default function Error({ reset }) {
                 {/*This button will retry the rendering of the component */}
                 {/* <button onClick={() => window.location.reload()}>Retry</button> */}
 
+                {/* Error File */}
+
                 {/* // This button will use next.js router to refresh the page and reset the error boundary */}
                 <button onClick={() => { startTransition(() => { router.refresh(), reset() }) }}>Retry</button>
             </div>
