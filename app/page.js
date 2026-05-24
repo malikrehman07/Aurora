@@ -188,6 +188,7 @@ const Home = () => {
             <div>
               <label className="block text-gray-700 mb-1">Subject</label>
               <input type="text" placeholder="What is this regarding?" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" />
+              {/* <input type="text" placeholder="What is this regarding?" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" /> */}
             </div>
 
             <div>
