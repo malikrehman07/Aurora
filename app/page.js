@@ -193,6 +193,7 @@ const Home = () => {
             <div>
               <label className="block text-gray-700 mb-1">Message</label>
               <textarea rows="4" placeholder="Tell us about your project..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none"></textarea>
+              {/* <textarea rows="4" placesholder="Tell us about your project..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none"></textarea> */}
             </div>
 
             <button type="submit" className="w-full bg-[#C5A572] text-white py-3 rounded-lg font-semibold hover:bg-[#a47c44] transition-all duration-300">
