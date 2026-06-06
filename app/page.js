@@ -198,9 +198,6 @@ const Home = () => {
             <button type="submit" className="w-full bg-[#C5A572] text-white py-3 rounded-lg font-semibold hover:bg-[#a47c44] transition-all duration-300">
               Submit Quote Request
             </button>
-            {/* <button type="submit" className="w-full bg-[#C5A572] text-white py-3 rounded-lg font-semibold hover:bg-[#a47c44] transition-all duration-300">
-              Submit Quote Request
-            </button> */}
           </form>
         </div>
       </div>
