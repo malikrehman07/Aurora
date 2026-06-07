@@ -175,10 +175,6 @@ const Home = () => {
               <label className="block text-gray-700 mb-1">Full Name</label>
               <input type="text" placeholder="Your name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" />
             </div>
-            {/* <div>
-              <label className="block text-gray-700 mb-1">Full Name</label>
-              <input type="text" placeholder="Your name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C5A572] outline-none" />
-            </div> */}
 
             <div>
               <label className="block text-gray-700 mb-1">Email Address</label>
