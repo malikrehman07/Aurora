@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
             </h2>
 
             <p className="mb-6">
-                Last updated: July 17, 2026
+                Last updated: July 23, 2026
             </p>
 
             <div className="space-y-8">
